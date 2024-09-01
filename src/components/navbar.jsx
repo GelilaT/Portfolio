@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] bg-opacity-80 backdrop-blur text-gray-300">
+    <div className="w-full h-[80px] flex justify-between items-center px-4 backdrop-blur text-gray-300">
       {/* Menu */}
       <ul className="hidden sm:flex pl-[410px]">
         <li>Home</li>

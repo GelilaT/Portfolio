@@ -1,0 +1,17 @@
+ {/* <div className="max-w-[1000px] mx-auto pt-4 w-full h-full"> */}
+      {/* <div>
+          <p className="font-bold text-4xl inline border-b-4 border-pink-500">
+            Projects
+          </p>
+        </div> */}
+      {/* </div> */}
+      {/* <div className="relative h-64 border-[0.01px] my-44 mx-16">
+        {/* <BackgroundBeams /> */}
+
+      {/* </div> */}
+      {/* <div>
+        
+      </div>
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4"></div> */}
+      {/* Value */}
