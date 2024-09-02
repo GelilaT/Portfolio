@@ -14,12 +14,12 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full h-[80px] flex justify-between items-center px-4 backdrop-blur text-gray-300">
+    <div className="w-full h-[80px] flex justify-between items-center px-4 backdrop-blur text-gray-300 z-0">
       {/* Menu */}
       <ul className="hidden sm:flex pl-[410px]">
         <li>Home</li>
         <li>About</li>
-        <li>Skills</li>
+        {/* <li>Skills</li> */}
         <li>Projects</li>
         <li>Contact</li>
       </ul>

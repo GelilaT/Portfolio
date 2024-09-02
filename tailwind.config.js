@@ -10,7 +10,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   darkMode: "class",
   theme: {
-    // rest of the code
+    
   },
   plugins: [addVariablesForColors],
 };

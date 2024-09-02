@@ -14,7 +14,7 @@ const About = () => {
         <div className="w-full h-1/2 bg-white absolute bottom-0"></div>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-stretch justify-center gap-10 p-10 max-w-[1200px] mx-auto shadow-sm rounded-lg bg-white relative z-10 shadow-blue-200">
+      <div className="flex flex-col sm:flex-row items-stretch justify-center gap-10 p-10 max-w-[1000px] mx-auto shadow-sm rounded-lg bg-white relative z-10 shadow-blue-200">
         {/* UI/UX */}
         <motion.div
           ref={uiRef}

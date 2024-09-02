@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion"; 
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { BackgroundBeams } from "./ui/bgBeams";
 import Navbar from "./navbar";
@@ -10,11 +10,11 @@ const Home = () => {
       name="home"
       className="bg-[#0a192f] w-full h-screen relative overflow-hidden"
     >
-      <Navbar />
       {/* Background Beams */}
-      <div className="-z-0 absolute inset-0">
+      <div className="-z-6 absolute inset-0">
         <BackgroundBeams />
       </div>
+      <Navbar />
 
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-20 flex flex-col justify-center h-full relative z-10">
