@@ -6,6 +6,8 @@ import Skills from "./components/skills";
 import Work from "./components/work"
 import Skill from "./components/Skill";
 import { BackgroundBeams } from "./components/ui/bgBeams";
+import Projects from "./components/project";
+import Contact from "./components/contact";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Home />
         <About />
         {/* <Skills /> */}
-        <Work />
+      {/* <Work /> */}
+      <Projects />
+      <Contact />
 
     </div>
   );

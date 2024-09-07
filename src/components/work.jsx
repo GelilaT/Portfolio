@@ -1,46 +1,58 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {useInView} from "../hooks/hooks";
 import { BackgroundBeams } from "./ui/bgBeams";
 import { BackgroundGradient } from "./ui/bgGradient";
 
 const Work = () => {
+  const [setRef, isVisible] = useInView({ threshold: 0.5 });
+  const [currentImage, setCurrentImage] = useState("./value1.png");
+
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       easing: "ease-in-out",
-      once: false, 
+      once: false,
     });
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      const interval = setInterval(() => {
+        setCurrentImage((prevImage) =>
+          prevImage === "./value1.png" ? "./value2.png" : "./value1.png"
+        );
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isVisible]);
+
   return (
-    <div id="work" className="w-full text-gray-300 bg-[#0a192f] pt-96 z-10">
+    <div id="work" className="w-full text-gray-300 bg-[#0a192f] pt-60 z-10">
       <div className="relative">
+        <h1 className="text-6xl font-bold text-center">Portfolio</h1>
+        <p className="text-center text-slate-500">Most recent works</p>
         <p
-          className="font-bold text-[250px] pl-32 absolute -top-52 -left-12 text-[#ACEB85]"
+          className="font-bold text-9xl pl-32 text-[#ACEB85] pt-10"
           data-aos="fade-right"
         >
-          Value
+          Value Prep
         </p>
         <div className="flex mx-36 gap-10 leading-8">
           <div>
-            <p
-              className="max-w-96 pt-24"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <p className="max-w-96" data-aos="fade-up" data-aos-delay="100">
               Value college prep involved the development of a comprehensive
               educational platform designed to help Ethiopian students navigate
               the college application process and achieve their academic goals.
-              The platform provides a range of resources, guidance, and tools to
-              assist students in preparing for and applying to colleges,
-              ensuring they have the best possible chance of success.
             </p>
           </div>
           <div>
             <img
-              src="./value1.png"
-              alt="this is a picture of value college prep"
+              ref={setRef}
+              src={currentImage}
+              alt="Value College Prep"
               className="w-[550px]"
               data-aos="fade-left"
               data-aos-delay="200"
@@ -48,7 +60,7 @@ const Work = () => {
           </div>
         </div>
         <p
-          className="font-bold text-[250px] pl-32 absolute -bottom-40 -right-1 text-[#8c90fd]"
+          className="font-bold text-9xl pl-32 absolute -bottom-40 -right-1 text-[#8c90fd]"
           data-aos="fade-left"
           data-aos-delay="300"
         >

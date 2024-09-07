@@ -1,23 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion"; 
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowRight, HiOutlineMail } from "react-icons/hi";
 import { BackgroundBeams } from "./ui/bgBeams";
 import Navbar from "./navbar";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import Side from "./ui/side";
 
 const Home = () => {
   return (
     <div
-      name="home"
+      id="home"
       className="bg-[#0a192f] w-full h-screen relative overflow-hidden"
     >
-      {/* Background Beams */}
-      <div className="-z-6 absolute inset-0">
-        <BackgroundBeams />
-      </div>
+      <Side />
       <Navbar />
+      {/* Background Beams */}
+      {/* <div className="-z-10 absolute inset-0">
+        <BackgroundBeams />
+      </div> */}
 
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-20 flex flex-col justify-center h-full relative z-10">
+      <div className="max-w-[1000px] mx-auto px-20 flex flex-col justify-center h-full relative">
         <motion.p
           className="bg-gradient-to-r from-blue-500 to-pink-600 text-transparent bg-clip-text text-4xl"
           initial={{ opacity: 0, y: -50 }}
@@ -64,17 +67,19 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.8, delay: 0.8, ease: "easeOut" }}
         >
-          <button className="text-white group border-2 border-blue-500 px-6 py-3 my-2 flex items-center hover:bg-blue-500">
-            Check out My Work{" "}
-            <motion.span
-              className="group-hover:rotate-90 duration-300"
-              initial={{ rotate: 0 }}
-              whileHover={{ rotate: 90 }}
-              transition={{ duration: 0.3 }}
-            >
-              <HiArrowNarrowRight className="ml-2" />
-            </motion.span>
-          </button>
+          <a href="#projects">
+            <button className="text-white group border-2 border-blue-700 px-6 py-3 my-2 flex items-center hover:bg-blue-700">
+              Check out My Work{" "}
+              <motion.span
+                className="group-hover:rotate-90 duration-300"
+                initial={{ rotate: 0 }}
+                whileHover={{ rotate: 90 }}
+                transition={{ duration: 0.3 }}
+              >
+                <HiArrowNarrowRight className="ml-2" />
+              </motion.span>
+            </button>
+          </a>
         </motion.div>
       </div>
     </div>
