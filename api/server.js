@@ -1,12 +1,14 @@
-// server.js
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const app = express();
+require('dotenv').config({ path: '.env.local' });
 const cors = require('cors');
 
-const TELEGRAM_API_URL = `https://api.telegram.org/bot7386014003:AAGeXzmxwKwxjOy3K12QtrzGhXMMFuW41Mk/sendMessage`;
-const CHAT_ID = '5163498269'; 
+const TELEGRAM_API_URL = process.env.TELEGRAM_API_URL;
+const CHAT_ID = process.env.CHAT_ID; 
+console.log('TELEGRAM_API_URL:', TELEGRAM_API_URL);
+console.log('CHAT_ID:', CHAT_ID);
 
 app.use(bodyParser.json());
 app.use(cors({
