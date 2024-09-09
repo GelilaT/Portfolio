@@ -151,9 +151,12 @@ const Projects = () => {
               <p className="text-sm mb-4 max-w-xl">
                 {selectedProject.description}
               </p>
-              <button className="bg-blue-700 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
+              <a href="#contact">
+
+              <button onClick={() => setSelectedProject(null)} className="bg-blue-700 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
                 Get in touch
               </button>
+              </a>
             </div>
             <div className="mt-4 mb-8">
               {selectedProject.technologies.map((tech, index) => (

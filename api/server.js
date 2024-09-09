@@ -7,8 +7,8 @@ const cors = require('cors');
 
 const TELEGRAM_API_URL = process.env.TELEGRAM_API_URL;
 const CHAT_ID = process.env.CHAT_ID; 
-console.log('TELEGRAM_API_URL:', TELEGRAM_API_URL);
-console.log('CHAT_ID:', CHAT_ID);
+// console.log('TELEGRAM_API_URL:', TELEGRAM_API_URL);
+// console.log('CHAT_ID:', CHAT_ID);
 
 app.use(bodyParser.json());
 app.use(cors({
